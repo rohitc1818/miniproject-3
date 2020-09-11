@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'cbApp/base.html' %}
+     {% block body_block %}
+         <h1> This is the Detail page of Branded Beer</h1>
+          <ul>
+              <h1><li>Beer Name:{{beer.name}}</li></h1>
+              <h1><li>Beer Taste:{{beer.taste}}</li></h1>
+              <h1><li>Beer Color:{{beer.color}}</li></h1>
+              <h1><li>Beer Price:{{beer.price}}</li></h1>
+          </ul>
+     {% endblock %}

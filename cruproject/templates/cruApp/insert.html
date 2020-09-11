@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'cruApp/base.html' %}
+    {% block body_block %}
+      <div class="jumbotron">
+          <h2> This is the STudent Form</h2>
+          <form method="post">
+              <table border="1">
+              {{form.as_p}}
+          </table><br><br>
+
+              {%csrf_token%}
+
+          <input type="submit" value="insert record" class="btn btn-primary">
+               </form>
+      </div>
+
+    {% endblock %}
+

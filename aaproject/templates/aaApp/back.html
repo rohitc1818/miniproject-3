@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'aaApp/base.html' %}
+    {% block body_block %}
+       <h1> This is the student info Table </h1>
+         <table border="2">
+             <thead>
+                 <th>name</th>
+                 <th>school</th>
+                 <th>rank</th>
+                 <th>age</th>
+                 <th>marks</th>
+                 <th>Actions</th>
+             </thead>
+             {% for l in list %}
+               <tr>
+                   <td>{{l.name}}</td>
+                   <td>{{l.school}}</td>
+                   <td>{{l.ranl}}</td>
+                   <td>{{l.age}}</td>
+                   <td>{{l.marks}}</td>
+                   <td><a class="" href="/update/{{l.id}}">Update</a>
+                       <a class="" href="/delete/{{l.id}}">Delete</a>
+                   </td>
+               </tr>
+             {% endfor %}
+         </table><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+         <a class="btn btn-primary" href="/"> Continue </a>
+    {% endblock %}

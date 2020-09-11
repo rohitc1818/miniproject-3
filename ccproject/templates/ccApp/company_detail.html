@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'ccApp/base.html' %}
+    {% block body_block %}
+    <h2> This is the company detailView </h2>
+       <ol>
+         <h2><li>company name: {{company.name}}</li></h2>
+         <h2><li>company location: {{company.location}}</li></h2>
+         <h2><li>company ceo name: {{company.ceo}}</li></h2>
+       </ol>
+      <a href="/update/{{company.id}}" class="btn btn-lg btn-success">Update Company Information </a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <a href="/delete/{{company.id}}" class="btn btn-danger btn-lg">Delete</a>
+    {% endblock %}

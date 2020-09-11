@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'cruApp/base.html' %}
+   {% block body_block %}
+    <h2> This is the update form </h2>
+     <form method="post">
+         {%csrf_token%}
+         {{form.as_p}}
+         Employee no: <input type="text" name="eno" value="{{emplo.eno}}"><br>
+         Employee name: <input type="text" name="ename" value="{{emplo.ename}}"><br>
+         Employee sal: <input type="text" name="esal" value="{{emplo.esal}}"><br>
+         Employee address : <input type="text" name="eaddr" value="{{emplo.eaddr}}"><br>
+         <input type="submit" name="" value="Update Record" class="btn btn-primary">
+     </form>
+    {%endblock%}

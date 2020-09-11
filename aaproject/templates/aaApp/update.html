@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'aaApp/base.html' %}
+    {% block body_block %}
+     <h2> This is student info Update form.</h2>
+     <form method="post">
+         {% csrf_token %}
+         {{form.as_p}}
+           <u1>
+               <li>Student name:- <input type="text"  value="{{l.name}}" name="name"></li><br>
+               <li>Student school:- <input type="text"  value="{{l.school}}" name="school"></li><br>
+               <li>Student rank:- <input type="text"  value="{{l.ranl}}" name="ranl"></li><br>
+               <li>Student age:- <input type="text"  value="{{l.age}}" name="age"></li><br>
+               <li>Student marks:- <input type="text"  value="{{l.marks}}" name="marks"></li><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+           </u1>
+         <input type="submit" class="btn btn-primary" value="Update Record" name="">
+     </form>
+    {% endblock %}
